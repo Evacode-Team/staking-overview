@@ -8,8 +8,8 @@ const TwoSideLayout = (props: TwoSideLayoutProps) => {
   const styles = useStyleConfig('TwoSideLayout', { variant })
 
   return <Box __css={styles}>
-    <Box>{leftSideChildren}</Box>
-    <Box>{rightSideChildren}</Box>
+    <Box h="100%" overflowY="scroll">{leftSideChildren}</Box>
+    <Box h="100%" overflowY="hidden">{rightSideChildren}</Box>
   </Box>
 };
 

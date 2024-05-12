@@ -18,9 +18,7 @@ export const UnauthorizedLayout = (props: UnauthorizedLayoutProps) => {
         <title>{fullTitle}</title>
       </Head>
       <TwoSideLayout
-        leftSideChildren={(
-            <Box p="40px 150px">Что-то на непонятном</Box>
-        )}
+        leftSideChildren={children}
         rightSideChildren={(
             <Flex justify="center" align="center">
                 <Image src={bgGradiet} alt='bg' />

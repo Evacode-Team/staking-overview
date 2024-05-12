@@ -1,9 +1,10 @@
-import { extendTheme, Box } from '@chakra-ui/react'
+import { extendTheme, Box } from '@chakra-ui/react';
 
 // import styles from './styles';
-// import components from './components';
+import * as components from './components';
 import * as layout from './layout';
-// import colors from './colors';
+import * as overrides from './overrides';
+
 // import layerStyles from './layerStyles';
 // import radii from './radii';
 // import space from './space';
@@ -12,23 +13,16 @@ import * as layout from './layout';
 // import fontSizes from './fontSizes';
 
 const config = {
-  initialColorMode: "standart",
+  initialColorMode: 'light',
   useSystemColorMode: true,
 };
 
-const overrides = {
-    config,
-    // styles,
-    components: {
-      ...layout,
-      // ...components,
-    },
-    // colors,
-    // layerStyles,
-    // radii,
-    // space,
-    // fonts,
-    // breakpoints,
-    // fontSizes,
-  }
-export default extendTheme(overrides);
+export const theme = extendTheme({
+  config,
+  // styles,
+  components: {
+    ...layout,
+    ...components,
+  },
+  ...overrides,
+});
